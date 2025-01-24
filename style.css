@@ -3,6 +3,15 @@ body {
   font-family: "Noto Sans", serif;
 }
 
+a {
+  color: #4a5240;
+}
+
+header {
+  border-bottom: 1px solid #4a5240;
+  padding: 0 0 30px 0;
+}
+
 /* main section box */
 .container {
   background-color: #a0b2a6;
@@ -11,4 +20,31 @@ body {
   padding: 30px;
   box-shadow: 0 30px 50px rgba(160, 178, 166, 0.3);
   border-radius: 30px;
+}
+
+.search-form-input {
+  background-color: #d2dad5;
+  border: 1px solid #4a5240;
+  border-radius: 15px;
+  width: 80%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.search-form-btn {
+  background-color: #4a5240;
+  border: none;
+  border-radius: 16px;
+  padding: 15px 30px;
+  color: #ccd2cf;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+footer {
+  border-top: 1px solid #4a5240;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #777973;
 }
