@@ -51,6 +51,7 @@ header {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  color: #343b2c;
 }
 
 .weather-details {
@@ -61,6 +62,7 @@ header {
 
 .weather-current-temp {
   display: flex;
+  color: #343b2c;
 }
 
 .weather-temp-value {
