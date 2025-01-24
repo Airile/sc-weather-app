@@ -3,38 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!--Noto sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather app</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city" id="" required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Boracity</h1>
-        <p>
-          Tuesday 13:45, scattered clouds
-          <br />
-          Humidity: 66%, Wind: 3.13km/h
-        </p>
-      </div>
-      <div>🌤 12C</div>
-    </main>
+    <div class="container">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city" id="" required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Boracity</h1>
+          <p>
+            Tuesday 13:45, scattered clouds
+            <br />
+            Humidity: 66%, Wind: 3.13km/h
+          </p>
+        </div>
+        <div>🌤 12C</div>
+      </main>
 
-    <footer>
-      Built by
-      <a href="https://github.com/Airile" target="_blank">Lotta</a>, is
-      open-sourced on
-      <a href="https://github.com/Airile/sc-weather-app" target="_blank"
-        >Github</a
-      >
-      and website hosted on
-      <a href="https://lotta-weather-app.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-    </footer>
+      <footer>
+        Built by
+        <a href="https://github.com/Airile" target="_blank">Lotta</a>, is
+        open-sourced on
+        <a href="https://github.com/Airile/sc-weather-app" target="_blank"
+          >Github</a
+        >
+        and website hosted on
+        <a href="https://lotta-weather-app.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
