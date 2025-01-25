@@ -88,7 +88,6 @@ function getForecast(city) {
   let apiKey = "o9431d13cf2b77b978e0f82t33a11a1f";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
-  console.log(apiUrl);
 }
 
 let searchForm = document.querySelector("#search-form");
@@ -108,8 +107,6 @@ function formatDay(timestamp) {
 // DRY - dont repeat yourself
 // use loops instead
 function displayForecast(response) {
-  console.log(response.data);
-
   let forecast = document.querySelector("#forecast");
 
   // loop to add the html 5x but every time different
