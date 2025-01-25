@@ -10,6 +10,7 @@ function updateCurrentTemp(response) {
   let timeUpdate = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let icon = document.querySelector("#icon");
+  let countryUpdate = document.querySelector("#update-county");
 
   cityUpdate.innerHTML = response.data.city;
   // updates the big current temperature displayed
@@ -31,6 +32,8 @@ function updateCurrentTemp(response) {
                 alt=""
                 class="weather-icon"
               />`;
+  // update country
+  countryUpdate.innerHTML = response.data.country;
 }
 
 // format date

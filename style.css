@@ -54,6 +54,13 @@ header {
   color: #343b2c;
 }
 
+.weather-country {
+  margin: 0;
+  font-size: 20px;
+  color: #4a5240;
+  line-height: 40px;
+}
+
 .weather-details {
   font-size: 16px;
   line-height: 24px;
