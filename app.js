@@ -86,3 +86,30 @@ searchForm.addEventListener("submit", handleSearch);
 
 // default searched city on page reload/open
 searchCity("Tallinn");
+
+// forecast logic
+// DRY - dont repeat yourself
+// use loops instead
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  // loop to add the html 5x but every time different
+  let forecastHtml = "";
+  // runs through the days array each time adding the
+  // forecastHtml on top of forecastHtml
+  days.forEach(function (day) {
+    forecastHtml += `<div class="weather-forecast-day">
+            <div class="forecast-date">${day}</div>
+            <div class="forecast-icon">☁</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temperature"><strong>15°</strong></div>
+              <div class="forecast-temperature">9°</div>
+            </div>
+        </div>  
+        `;
+  });
+  forecast.innerHTML = forecastHtml;
+}
+
+displayForecast();
