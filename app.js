@@ -2,9 +2,52 @@
 function updateCurrentTemp(response) {
   let currentTemp = document.querySelector("#current-temp");
   let temperature = response.data.temperature.current;
+  // takes the submitted city name and makes it the same as the api response
   let cityUpdate = document.querySelector("#update-city-name");
+  let desctiptionUpdate = document.querySelector("#description");
+  let humidityUpdate = document.querySelector("#humidity");
+  let windSpeedUpdate = document.querySelector("#wind-speed");
+  let timeUpdate = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
   cityUpdate.innerHTML = response.data.city;
+  // updates the big current temperature displayed
   currentTemp.innerHTML = Math.round(temperature);
+
+  // update weather description
+  desctiptionUpdate.innerHTML = response.data.condition.description;
+
+  // update humidity
+  humidityUpdate.innerHTML = `${response.data.temperature.humidity}%`;
+  // update windspeed
+  windSpeedUpdate.innerHTML = `${response.data.wind.speed} km/h`;
+  // update day and time
+  timeUpdate.innerHTML = formatDate(date);
+}
+
+// format date
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thrusday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 // connect API to the search function
