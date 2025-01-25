@@ -34,6 +34,7 @@ function updateCurrentTemp(response) {
               />`;
   // update country
   countryUpdate.innerHTML = response.data.country;
+  getForecast(response.data.city);
 }
 
 // format date
@@ -81,6 +82,15 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
+// forecast API function
+function getForecast(city) {
+  //makes api call, displays forecast
+  let apiKey = "o9431d13cf2b77b978e0f82t33a11a1f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearch);
 
@@ -90,7 +100,9 @@ searchCity("Tallinn");
 // forecast logic
 // DRY - dont repeat yourself
 // use loops instead
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecast = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -111,5 +123,3 @@ function displayForecast() {
   });
   forecast.innerHTML = forecastHtml;
 }
-
-displayForecast();
