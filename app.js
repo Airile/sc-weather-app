@@ -9,6 +9,8 @@ function updateCurrentTemp(response) {
   let windSpeedUpdate = document.querySelector("#wind-speed");
   let timeUpdate = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let icon = document.querySelector("#icon");
+
   cityUpdate.innerHTML = response.data.city;
   // updates the big current temperature displayed
   currentTemp.innerHTML = Math.round(temperature);
@@ -22,6 +24,13 @@ function updateCurrentTemp(response) {
   windSpeedUpdate.innerHTML = `${response.data.wind.speed} km/h`;
   // update day and time
   timeUpdate.innerHTML = formatDate(date);
+  // creating icon inject from api
+  // empty div in html gets this image pushed into it
+  icon.innerHTML = `<img
+                src="${response.data.condition.icon_url}"
+                alt=""
+                class="weather-icon"
+              />`;
 }
 
 // format date
