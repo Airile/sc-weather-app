@@ -5,6 +5,8 @@ function handleSearch(event) {
   let searchInput = document.querySelector("#search-form-input");
   let cityUpdate = document.querySelector("#update-city-name");
   cityUpdate.innerHTML = searchInput.value;
+  // API integration
+  let apiKey = "o9431d13cf2b77b978e0f82t33a11a1f";
 }
 
 let searchForm = document.querySelector("#search-form");
