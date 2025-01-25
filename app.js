@@ -22,7 +22,7 @@ function updateCurrentTemp(response) {
   // update humidity
   humidityUpdate.innerHTML = `${response.data.temperature.humidity}%`;
   // update windspeed
-  windSpeedUpdate.innerHTML = `${response.data.wind.speed} km/h`;
+  windSpeedUpdate.innerHTML = `${response.data.wind.speed} m/s`;
   // update day and time
   timeUpdate.innerHTML = formatDate(date);
   // creating icon inject from api
